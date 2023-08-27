@@ -1,0 +1,74 @@
+/* setting the colors */
+:root {
+    /*Primary colors */
+    --cl-text: hsl(193, 38%, 86%);
+    --cl-Green: hsl(150, 100%, 66%);
+    /* Neutral colors */
+    --cl-Blue: hsl(217, 19%, 38%);
+    --cl-Dark-Blue: hsl(217, 19%, 24%);
+    --cl-Dark-Blue-shadow: hsl(218, 23%, 16%);
+}
+
+/* strat styling the body */
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--cl-Dark-Blue) !important;
+}
+
+/* end styling the body */
+/* start styling the main container */
+main {
+    background-color: var(--cl-Blue);
+    width: clamp(18rem, 80vw, 60rem);
+    box-shadow: 0 0 20px 0 hsl(218, 23%, 16%) ;
+    @media( max-width : 500px ){
+        transform: translateY(-5rem);
+    }
+}
+
+/* start styling the h4 */
+h4 {
+    color: var(--cl-Green) !important;
+    letter-spacing: 2px;
+}
+
+/* end styling the h4 */
+/* start styling the main paragraph */
+q {
+    color: var(--cl-text);
+    font-size: clamp(1.14em, 3vw, 2em);
+}
+
+/* end styling the main paragraph */
+/* start styling the seprator */
+.separator {
+    & hr {
+        color: transparent;
+        height: 2px;
+        background-color: var(--cl-text);
+    }
+
+    & .quote-icon {
+        color: white;
+        background-color: var(--cl-Blue);
+        top : 50% ;
+        left : 50% ;
+        scale : 1.5;
+        transform: translate(-36%,-37%);
+    }
+}
+
+/* end styling the seprator */
+/* start styling the dice */
+.dice {
+    background-color: var(--cl-Green);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    &:hover {
+        box-shadow: 0 0 20px 0 hsl(150, 100%, 66%);
+    }
+}
+
+/* end styling the dice */
+/* end styling the main container */
